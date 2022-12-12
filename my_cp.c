@@ -12,6 +12,12 @@ int main(){
     if (res == -1){
         printf("ERROR: L'arxiu no existeix");
     } else {
-        desc=open("fitxer.txt", O_CREAT|O_WRONLY|O_TRUNC);
-    }   
+        if (desc=open("hola.txt", O_CREAT|O_WRONLY|O_TRUNC,0777 ) == -1){
+
+        }
+        else{
+        printf("%d", desc);
+        }
+    }
+    close(desc);   
 }
